@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Résultats de la recherche pour "{{ search_query }}"</h1>
+
+    <ul>
+        {% for article in articles %}
+            <li>{{ article.nom }}</li>
+        {% empty %}
+            <li>Aucun résultat trouvé.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
